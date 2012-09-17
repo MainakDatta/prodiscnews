@@ -2,61 +2,53 @@
 <html>
   <head>
     <title>PRO DISC NEWS</title>
-    <style type="text/css" media="screen">
-      body {
-        margin: 0;
-        margin-bottom: 25px;
-        padding: 0;
-        background-color: #780000 ;
-        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
-        font-size: 13px;
-        color: #333;
-      }
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 
-      #page {
-        width: 750px;
-        margin: 0;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      a:visited {
-        color: rgb(125,125,255);
-      }
-
-      #sidebar {
-        float: right;
-        width: 250px;
-        color: rgb(125,125,255);
-      }
-      #sidebar li {
- 
-        color: rgb(0,0,0);
-      }
-      #header h1 {
-        float: top;
-        color: rgb(0,0,255);
-        margin-bottom: 10px;
-        font-size: 36px;
-        margin:auto;
-        width:70%;
-      }
-      #header h2 {
-        color: rgb(0 ,0,0);
-        margin: auto;
-        margin-bottom: 10px;
-        font-size: 20px;
-        width: 85%;
-      }
-      #header img{
-        float: left;
-
-      }
-
-    </style>
   </head>
   <body>
-    <div id="page">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Pro Disc News</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">News</a></li>
+              <li><a href="#standings">Standings</a></li>
+              <li><a href="#schedule">Schedule</a></li>
+              <li><a href="#rules">Rules</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teams <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Philadelphia Spinners</a></li>
+                  <li><a href="#">Indianapolis AlleyCats</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="nav-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="navbar-form pull-right">
+              <input class="span2" type="text" placeholder="Email">
+              <input class="span2" type="password" placeholder="Password">
+              <button type="submit" class="btn">Sign in</button>
+            </form>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+    <script type="text/javascript" src="http://twitter.com/statuses/user_timeline/ProDiscNews.json?callback=twitterCallback2&count=3"></script>
+
+ <!--    <div id="page">
       <div id="sidebar">
           <ul id="sidebar-items">
             <img src="https://si0.twimg.com/profile_images/2377575566/xpeej9z9n5ubau532c3z.png"/>
@@ -77,6 +69,22 @@
             <h2>THE #1 SOURCE OF NEWS ON THE AMERICAN ULTIMATE DISC LEAGUE!</h2>
         </div>
       </div>  
-    </div>
-  </body>
+    </div> -->
+
+        <!-- The javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="bootstrap/js/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap-transition.js"></script>
+    <script src="bootstrap/js/bootstrap-alert.js"></script>
+    <script src="bootstrap/js/bootstrap-modal.js"></script>
+    <script src="bootstrap/js/bootstrap-dropdown.js"></script>
+    <script src="bootstrap/js/bootstrap-scrollspy.js"></script>
+    <script src="bootstrap/js/bootstrap-tab.js"></script>
+    <script src="bootstrap/js/bootstrap-tooltip.js"></script>
+    <script src="bootstrap/js/bootstrap-popover.js"></script>
+    <script src="bootstrap/js/bootstrap-button.js"></script>
+    <script src="bootstrap/js/bootstrap-collapse.js"></script>
+    <script src="bootstrap/js/bootstrap-carousel.js"></script>
+    <script src="bootstrap/js/bootstrap-typeahead.js"></script>
 </html>
