@@ -176,6 +176,11 @@ a:hover {
   text-decoration: underline;
 }
 
+.line-vertical {
+  border-left: 1px solid #000000;
+  height: 150px;
+}
+
 .img-rounded {
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;
@@ -187,6 +192,15 @@ a:hover {
   background-color: #fff;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+     -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.img-rectangle {
+  padding: 4px;
+  width: 100%;
+  height: 375px;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
      -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -543,6 +557,11 @@ a:hover {
 [class*="span"].pull-right,
 .row-fluid [class*="span"].pull-right {
   float: right;
+}
+
+[class*="span"].pull-left,
+.row-fluid [class*="span"].pull-left {
+  float: left;
 }
 
 .container {
@@ -3755,6 +3774,7 @@ input[type="submit"].btn.btn-mini {
   list-style: none;
 }
 
+
 .nav > li > a {
   display: block;
 }
@@ -4152,8 +4172,8 @@ input[type="submit"].btn.btn-mini {
 
 .navbar-inner {
   min-height: 40px;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
   background-color: #fafafa;
   background-image: -moz-linear-gradient(top, #ffffff, #f2f2f2);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f2f2f2));
@@ -5737,18 +5757,40 @@ a.badge:hover {
 .hero-unit h1 {
   margin-bottom: 0;
   font-size: 60px;
+  font-weight: lighter;
+  font-family: "Impact";
+  text-align: center;
+  color: rgb(0,0,125);
   line-height: 1;
-  letter-spacing: -1px;
-  color: inherit;
 }
 
 .hero-unit p {
-  font-size: 18px;
-  font-weight: 200;
+  font-family: "Lucida Grande", Tahoma;
+  font-size: 20px;
+  font-weight: lighter;
+  font-variant: normal;
+  text-transform: uppercase;
+  color: #666666;
+  margin-top: 10px;
+  text-align: center;
+  letter-spacing: 0.3em;
+
+/*  font-weight: 200;
   line-height: 30px;
-  color: inherit;
+  text-align: center;
+  color: rgb(125,125, 125);*/
 }
 
+/*.hero-unit img {
+  margin-right: auto;
+  margin-left: auto;
+  width: auto;
+  height: 350px;
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+}
+*/
 .pull-right {
   float: right;
 }
