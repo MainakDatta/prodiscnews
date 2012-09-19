@@ -707,6 +707,8 @@
     })
   }
 
+  $('.dropdown-toggle').dropdown()
+  
   $.fn.dropdown.Constructor = Dropdown
 
 
