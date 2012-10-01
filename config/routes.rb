@@ -1,4 +1,6 @@
 Prodiscnews::Application.routes.draw do
+  resources :articles
+
   resources :users
 
   # The priority is based upon order of creation:
