@@ -8,10 +8,8 @@ gem 'rails', '3.2.1'
 group :development do
 	gem 'sqlite3'
 end
-
 group :production do
 	gem 'pg'
-	gem "therubyracer", :platforms => [:ruby]
 end
 
 
@@ -25,9 +23,6 @@ group :assets do
   # gem 'therubyracer'
 
   gem 'uglifier', '>= 1.0.3'
-
-  gem 'twitter-bootstrap-rails', :git => "git://github.com/seyhunak/twitter-bootstrap-rails.git", :branch => "static"
-	
 end
 
 gem 'jquery-rails'
