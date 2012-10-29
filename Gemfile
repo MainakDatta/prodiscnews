@@ -4,6 +4,8 @@ gem 'rails', '3.2.1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'devise'
+
 
 group :development do
 	gem 'sqlite3'
