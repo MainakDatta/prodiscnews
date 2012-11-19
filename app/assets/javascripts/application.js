@@ -13,3 +13,29 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(function() {
+    var $isdisplayed = false;
+    var $display = $("#display");
+    $display.click(function() {
+        if($isdisplayed == false){
+        	var $button = $display.find(".btn-warning");
+            $button.text("Hide");            
+        	// $("<button class='btn-warning'>Hide</button>").appendTo($display); 
+            $("<h1>HELP IS ON THE WAY!!</h1>").insertAfter($display);
+            $("<img src='http://nyan-cat.com/images/nyan-cat.gif' />").
+              insertAfter($display);
+            $isdisplayed = true;
+        }
+        else{
+            var $button = $display.find(".btn-warning");
+            $button.text("Help");
+            var $text = $display.next();
+            $text.remove();
+            var $other = $display.next();
+            $other.remove();
+            //$("<button class='btn-warning'>Help</button>").appendTo($display); 
+            $isdisplayed = false;
+        }                
+    });
+});

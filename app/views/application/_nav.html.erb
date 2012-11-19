@@ -24,12 +24,11 @@
               </li>
               <li><a href="https://twitter.com/PRODISCNEWS" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @ProDiscNews</a></li>
             </ul>
-            <!-- Possible sign-in form -->
-<!--             <form class="navbar-form pull-right">
-              <input class="span2" type="text" placeholder="Email">
-              <input class="span2" type="password" placeholder="Password">
-              <button type="submit" class="btn">Sign in</button>
-            </form> -->
+            <div id="display">
+               <button class="btn-warning">Help</button> 
+            </div>​ 
+            
+            </div>
             <div class="nav pull-right">
               <% if user_signed_in? %>
                   Signed in as <%= current_user.email %>. Not you?
