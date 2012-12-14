@@ -1,27 +1,31 @@
 <p id="notice"><%= notice %></p>
 
+<div class="container">
+	<h1><%= @post.title %></h1>
+	<p>
+	  <b>by <%= @post.author %></b>
+	</p>
 
-<h1><%= @post.title %></h1>
-<p>
-  <b>by <%= @post.author %></b>
-</p>
+	<p>
+	  <b>Writen on: <%= @post.created_at %></b>
+	</p>
 
-<p>
-  <b>Writen on: <%= @post.created_at %></b>
-</p>
+	<p>
+	  <%= @post.content %>
+	</p>
 
-<p>
-  <%= @post.content %>
-</p>
+	<hr size="3" noshade>
+	<!-- Display Comments  -->
+	<h4>Comments: </h4>
+	<%= render "comments/show" %>
+	
+	<hr size="3" noshade>
 
-<hr size="3" noshade>
-<!-- Display Comments  -->
-<h4>Comments: </h4>
-<%= render "comments/show" %>
+	<!-- Add comments -->
+	<h4>Add a comment:</h4>
+	<%= render "comments/form" %>
+ </div>
 
-<!-- Add comments -->
-<h4>Add a comment:</h4>
-<%= render "comments/form" %>
 
 
 <% if user_signed_in? %>

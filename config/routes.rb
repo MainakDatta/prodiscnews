@@ -1,4 +1,6 @@
 Prodiscnews::Application.routes.draw do
+  resources :teams
+
   devise_for :users
 
   get "pages/home"
