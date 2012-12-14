@@ -23,36 +23,11 @@
 
 <!-- Display Comments  -->
 <h2>Comments: </h2>
-<% @post.comments.each do |comment| %>
-  <p>
-    <b>Author:</b>
-    <%= comment.author %>
-  </p>
-  <p>
-    <b>Comment:</b>
-    <%= comment.body %>
-  </p>
-  <p>
-	<b>Date:</b>
-	<%= comment.created_at %>
-  </p>
-<% end %>
+<%= render "comments/show" %>
 
 <!-- Add comments -->
 <h2>Add a comment:</h2>
-<%= form_for([@post, @post.comments.build]) do |f| %>	
-  <div class="field">
-    <%= f.label :author %><br />
-    <%= f.text_field :author %>
-  </div>
-  <div class="field">
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+<%= render "comments/form" %>
 
 
 <% if user_signed_in? %>
