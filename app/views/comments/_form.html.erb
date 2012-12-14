@@ -1,11 +1,11 @@
 <%= form_for([@post, @post.comments.build]) do |f| %>	
   <div class="field">
-    <%= f.label :author %><br />
-    <%= f.text_field :author %>
+    <%= f.label :"Display Name" %>
+    <%= f.text_field :author, :placeholder => "Enter your name"%>
   </div>
   <div class="field">
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
+    <%= f.label :"Your Comment" %>
+    <%= f.text_area :body, :placeholder => "Enter comment", :size => "30x5" %>
   </div>
   <div class="actions">
     <%= f.submit %>

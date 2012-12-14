@@ -1,32 +1,26 @@
 <p id="notice"><%= notice %></p>
 
+
+<h1><%= @post.title %></h1>
 <p>
-  <b>Author:</b>
-  <%= @post.author %>
+  <b>by <%= @post.author %></b>
 </p>
 
 <p>
-  <b>Title:</b>
-  <%= @post.title %>
+  <b>Writen on: <%= @post.created_at %></b>
 </p>
 
 <p>
-  <b>Date:</b>
-  <%= @post.created_at %>
-</p>
-
-<p>
-  <b>Content:</b>
   <%= @post.content %>
 </p>
 
-
+<hr size="3" noshade>
 <!-- Display Comments  -->
-<h2>Comments: </h2>
+<h4>Comments: </h4>
 <%= render "comments/show" %>
 
 <!-- Add comments -->
-<h2>Add a comment:</h2>
+<h4>Add a comment:</h4>
 <%= render "comments/form" %>
 
 

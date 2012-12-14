@@ -1,21 +1,15 @@
 <% @post.comments.each do |comment| %>
   <p>
-    <b>Author:</b>
-    <%= comment.author %>
+    <b><%= comment.author %></b>
+    on <%= comment.created_at %>
   </p>
   <p>
-    <b>Comment:</b>
     <%= comment.body %>
   </p>
   <p>
-	<b>Date:</b>
-	<%= comment.created_at %>
-  </p>
   <% if user_signed_in? %>
     <p>
-    <%= link_to 'Delete Comment', [comment.post, comment],
-                 :confirm => 'Are you sure?',
-                 :method => :delete %>
+      <%= link_to 'Delete Comment', [comment.post, comment], :confirm => 'Are you sure?', :method => :delete %>
     </p>
   <% end %>  
 <% end %>
