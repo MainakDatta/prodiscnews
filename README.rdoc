@@ -1,1 +1,7 @@
-Mainak Datta 
+Prodiscnews is a website, hosted by Heroku with a Rails back-end, that keeps track of the latest news in the American Ultimate Disc League.
+
+URL: http://prodiscnews.herokuapp.com/
+
+To play around with editing priveles, log in with:
+Email - admin@admin.com
+Password - password
