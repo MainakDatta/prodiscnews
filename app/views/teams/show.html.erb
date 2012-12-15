@@ -1,20 +1,21 @@
 <p id="notice"><%= notice %></p>
 
+<div class="container">
+	<h1><%= @team.name %></h1>
+	</p>
+
 <p>
-  <b>Name:</b>
-  <%= @team.name %>
+  <h3>Wins: <%= @team.wins %></h3>
 </p>
 
 <p>
-  <b>Wins:</b>
-  <%= @team.wins %>
+  <h3>Losses: <%= @team.losses %></h3>	
 </p>
 
 <p>
-  <b>Losses:</b>
-  <%= @team.losses %>
+  <h3>Win pct: <%= @team.win_percentage %></h3>	
 </p>
-
+</div>
 
 <%= link_to 'Edit', edit_team_path(@team) %> |
 <%= link_to 'Back', teams_path %>

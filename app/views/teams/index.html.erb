@@ -1,27 +1,24 @@
-<h1>Listing teams</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Wins</th>
-    <th>Losses</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<!-- make this private -->
+<% if user_signed_in? %>
+    <%= link_to 'Add A Team', new_team_path %>
+<% end %>
 
 <% @teams.each do |team| %>
-  <tr>
-    <td><%= team.name %></td>
-    <td><%= team.wins %></td>
-    <td><%= team.losses %></td>
-    <td><%= link_to 'Show', team %></td>
-    <td><%= link_to 'Edit', edit_team_path(team) %></td>
-    <td><%= link_to 'Destroy', team, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+    <div class="container">
+        <h1><%= team.name %></h1>
+        <td><%= link_to "Show", team %></td>
+        <!-- make this private -->
+        <% if user_signed_in? %>
+            <td><%= link_to 'Update', edit_team_path(team) %></td>
+        <% end %>
+        <!-- make this private -->
+        <% if user_signed_in? %>
+            <td><%= link_to 'Destroy', team, confirm: 'Are you sure?', method: :delete %></td>
+        <% end %>
+        <hr size="3" noshade>
+    </div>
 <% end %>
-</table>
+
 
 <br />
 
-<%= link_to 'New Team', new_team_path %>
