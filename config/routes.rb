@@ -1,4 +1,6 @@
 Prodiscnews::Application.routes.draw do
+  get "about/page"
+
   get "standings/page"
 
   resources :teams
