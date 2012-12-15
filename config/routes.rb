@@ -1,4 +1,6 @@
 Prodiscnews::Application.routes.draw do
+  get "standings/page"
+
   resources :teams
 
   devise_for :users

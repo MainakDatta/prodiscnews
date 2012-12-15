@@ -7,4 +7,8 @@ class Team < ActiveRecord::Base
     	(((self.wins.to_f)/(self.wins.to_f + self.losses.to_f)*100).to_i).to_f/100
   	end 
 
+  	def self.sorted_by_percentage
+    	self.all.sort_by(&:win_percentage).reverse
+  	end 
+
 end
